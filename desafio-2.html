@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="red-btn">Lasanha é bom</button>
+    <div class="container"></div>
+    <!-- Pai -->
+
+    <script>
+      var btnElement = document.querySelector(".red-btn");
+      var containerEl = document.querySelector(".container");
+
+      function createSquare() {
+        //Aqui eu vou criar um quadrado
+        //Primeiro eu tenho que criar uma div
+        var squareEl = document.createElement("div");
+
+        //Segundo estilizar minha div pra ter o formato de uma box
+        squareEl.style.width = "100px";
+        squareEl.style.height = "100px";
+        squareEl.style.marginBottom = "10px";
+        squareEl.style.backgroundColor = "#f00";
+
+        //dar um appendchild no meu container, ou seja, vou inserir a div no container
+        containerEl.appendChild(squareEl);
+      }
+
+      //toda vez que clicar no botão a função creatsquare vai ser disparada
+      btnElement.onclick = createSquare;
+    </script>
+  </body>
+</html>
